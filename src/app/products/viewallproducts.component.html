@@ -1,0 +1,34 @@
+<div class="container">
+  <div class="d-flex justify-content-between align-items-center mb-3">
+    <h2>Products</h2>
+  </div>
+
+  <div *ngIf="errorMessage" class="alert alert-danger">{{ errorMessage }}</div>
+
+  <table class="table table-bordered table-striped" *ngIf="listofproducts?.length; else noProducts">
+    <tr>
+      <th>Company Name</th>
+      <th>Model</th>
+      <th>Processor</th>
+      <th>Camera</th>
+      <th>Cost</th>
+      <th>Rating</th>
+      <th>Image</th>
+      <th>Actions</th>
+    </tr>
+    <tr *ngFor="let product of listofproducts">
+      <td>{{product.vendor}}</td>
+      <td>{{product.Model}}</td>
+      <td>{{product.Processor}}</td>
+      <td>{{product.camera}}</td>
+      <td>{{product.cost}}</td>
+      <td>{{product.rating}}</td>
+      <td><img [src]="product.image" alt="Mobile Image" style="max-width:100px;"/></td>
+      <td><a [routerLink]="['/real','viewproduct', product.id]" class="btn btn-success">view</a></td>
+    </tr>
+  </table>
+
+  <ng-template #noProducts>
+    <div class="alert alert-info">No products available.</div>
+  </ng-template>
+</div>

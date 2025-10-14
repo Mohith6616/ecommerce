@@ -1,0 +1,767 @@
+{
+  "categories": [
+    {
+      "id": "1",
+      "name": "Apple"
+    },
+    {
+      "id": "2",
+      "name": "CMF"
+    },
+    {
+      "id": "3",
+      "name": "Huawei"
+    },
+    {
+      "id": "4",
+      "name": "Iqoo"
+    },
+    {
+      "id": "5",
+      "name": "Moto"
+    },
+    {
+      "id": "6",
+      "name": "Nothing"
+    },
+    {
+      "id": "7",
+      "name": "Oneplus"
+    },
+    {
+      "id": "8",
+      "name": "Oppo"
+    },
+    {
+      "id": "9",
+      "name": "Poco"
+    },
+    {
+      "id": "10",
+      "name": "Realme"
+    },
+    {
+      "id": "11",
+      "name": "Redmi"
+    },
+    {
+      "id": "12",
+      "name": "Samsung"
+    },
+    {
+      "id": "13",
+      "name": "Vivo"
+    }
+  ],
+  "products": [
+    {
+      "catid": 1,
+      "image": "http://localhost:4200/assets/images/Apple/16_e.jpg",
+      "vendor": "Apple",
+      "Model": "16 e",
+      "Processor": "A18",
+      "camera": "48MP",
+      "cost": "₹64900",
+      "rating": 4.6,
+      "is_available": true,
+      "id": "1"
+    },
+    {
+      "catid": 1,
+      "image": "http://localhost:4200/assets/images/Apple/16_pro.jpg",
+      "vendor": "Apple",
+      "Model": "16 Pro",
+      "Processor": "A18 Pro",
+      "camera": "48MP + 48MP + 12MP",
+      "cost": "₹122900",
+      "rating": 4.7,
+      "is_available": true,
+      "id": "2"
+    },
+    {
+      "id": "3",
+      "catid": 1,
+      "vendor": "Apple",
+      "Model": "16",
+      "Processor": "A18",
+      "camera": "48MP + 12MP",
+      "cost": "₹74900",
+      "is_available": true,
+      "rating": 4.6,
+      "image": "http://localhost:4200/assets/images/Apple/16.jpg"
+    },
+    {
+      "id": "4",
+      "catid": 1,
+      "vendor": "Apple",
+      "Model": "SE 4",
+      "Processor": "A16",
+      "camera": "12MP",
+      "cost": "₹49999",
+      "is_available": true,
+      "rating": 4.3,
+      "image": "http://localhost:4200/assets/images/Apple/SE_4.jpg"
+    },
+    {
+      "id": "5",
+      "catid": 2,
+      "vendor": "CMF",
+      "Model": "Phone 1",
+      "Processor": "Mediatek Dimensity 7300",
+      "camera": "50MP + 2MP",
+      "cost": "₹15999",
+      "is_available": true,
+      "rating": 4.3,
+      "image": "http://localhost:4200/assets/images/CMF/Phone_1.jpg"
+    },
+    {
+      "id": "6",
+      "catid": 2,
+      "vendor": "CMF",
+      "Model": "Phone 2 Pro",
+      "Processor": "Mediatek Dimensity 7300 Pro",
+      "camera": "50MP + 50MP + 8MP",
+      "cost": "₹18999",
+      "is_available": true,
+      "rating": 4.4,
+      "image": "http://localhost:4200/assets/images/CMF/Phone_2_Pro.jpg"
+    },
+    {
+      "id": "7",
+      "catid": 3,
+      "vendor": "Huawei",
+      "Model": "Mate XT",
+      "Processor": "HiSilicon Kirin 9010",
+      "camera": "50MP + 12MP + 12MP",
+      "cost": "₹399999",
+      "is_available": true,
+      "rating": 5,
+      "image": "http://localhost:4200/assets/images/Huawei/Mate_XT.png"
+    },
+    {
+      "id": "8",
+      "catid": 3,
+      "vendor": "Huawei",
+      "Model": "Pura 80 Ultra",
+      "Processor": "HiSilicon Kirin 9020",
+      "camera": "50MP + 40MP + 50MP + 12.5MP",
+      "cost": "₹118990",
+      "is_available": true,
+      "rating": 4.9,
+      "image": "http://localhost:4200/assets/images/Huawei/Pura_80_Ultra.png"
+    },
+    {
+      "id": "9",
+      "catid": 3,
+      "vendor": "Huawei",
+      "Model": "Pura X",
+      "Processor": "HiSilicon Kirin 9020",
+      "camera": "50MP + 40MP + 8MP + 1.5MP",
+      "cost": "₹89990",
+      "is_available": true,
+      "rating": 4.7,
+      "image": "http://localhost:4200/assets/images/Huawei/Pura_X.jpg"
+    },
+    {
+      "id": "10",
+      "catid": 4,
+      "vendor": "Iqoo",
+      "Model": "13",
+      "Processor": "Snapdragon 8 Elite",
+      "camera": "50MP + 50MP + 50MP",
+      "cost": "₹54998",
+      "is_available": true,
+      "rating": "4.4",
+      "image": "http://localhost:4200/assets/images/Iqoo/13.png"
+    },
+    {
+      "id": "11",
+      "catid": 4,
+      "vendor": "Iqoo",
+      "Model": "Neo 10",
+      "Processor": "Snapdragon 8s Gen 4",
+      "camera": "50MP + 8MP",
+      "cost": "₹33998",
+      "is_available": true,
+      "rating": 4.3,
+      "image": "http://localhost:4200/assets/images/Iqoo/Neo_10.jpg"
+    },
+    {
+      "id": "12",
+      "catid": 4,
+      "vendor": "Iqoo",
+      "Model": "Neo 10R",
+      "Processor": "Snapdragon 8s Gen 3",
+      "camera": "50MP + 8MP",
+      "cost": "₹26998",
+      "is_available": true,
+      "rating": 4.4,
+      "image": "http://localhost:4200/assets/images/Iqoo/Neo_10R.jpg"
+    },
+    {
+      "id": "13",
+      "catid": 4,
+      "vendor": "Iqoo",
+      "Model": "Z10R",
+      "Processor": "Mediatek Dimensity 7400",
+      "camera": "50MP + 2MP",
+      "cost": "₹17499",
+      "is_available": true,
+      "rating": 4.5,
+      "image": "http://localhost:4200/assets/images/Iqoo/Z10R.jpg"
+    },
+    {
+      "id": "14",
+      "catid": 5,
+      "vendor": "Moto",
+      "Model": "Edge 60 Fusion",
+      "Processor": "Mediatek Dimensity 7400",
+      "camera": "50MP + 13MP",
+      "cost": "₹22999",
+      "is_available": true,
+      "rating": 4.5,
+      "image": "http://localhost:4200/assets/images/Moto/Edge_60_Fusion.jpg"
+    },
+    {
+      "id": "15",
+      "catid": 5,
+      "vendor": "Moto",
+      "Model": "Edge 60 Pro",
+      "Processor": "Mediatek Dimensity 8350",
+      "camera": "50MP + 50MP + 10MP",
+      "cost": "₹29999",
+      "is_available": true,
+      "rating": 4.5,
+      "image": "http://localhost:4200/assets/images/Moto/Edge_60_Pro.jpg"
+    },
+    {
+      "id": "16",
+      "catid": 5,
+      "vendor": "Moto",
+      "Model": "Edge 60 Stylus",
+      "Processor": "Snapdragon 7s Gen 2",
+      "camera": "50MP + 13MP",
+      "cost": "₹22999",
+      "is_available": true,
+      "rating": 4.3,
+      "image": "http://localhost:4200/assets/images/Moto/Edge_60_Stylus.jpg"
+    },
+    {
+      "id": "17",
+      "catid": 5,
+      "vendor": "Moto",
+      "Model": "Edge 60",
+      "Processor": "Mediatek Dimensity 7400",
+      "camera": "50MP + 50MP + 10MP",
+      "cost": "₹25999",
+      "is_available": true,
+      "rating": 4.5,
+      "image": "http://localhost:4200/assets/images/Moto/Edge_60.jpg"
+    },
+    {
+      "id": "18",
+      "catid": 5,
+      "vendor": "Moto",
+      "Model": "g96",
+      "Processor": "Snapdragon 7s Gen 2",
+      "camera": "50MP + 8MP",
+      "cost": "₹17999",
+      "is_available": true,
+      "rating": 4.5,
+      "image": "http://localhost:4200/assets/images/Moto/g96.jpg"
+    },
+    {
+      "id": "19",
+      "catid": 6,
+      "vendor": "Nothing",
+      "Model": "Phone 3",
+      "Processor": "Snapdragon 8s Gen 4",
+      "camera": "50MP + 50MP + 50MP",
+      "cost": "₹79999",
+      "is_available": true,
+      "rating": 4.7,
+      "image": "http://localhost:4200/assets/images/Nothing/Phone_3.jpg"
+    },
+    {
+      "id": "20",
+      "catid": 6,
+      "vendor": "Nothing",
+      "Model": "Phone 3a Pro",
+      "Processor": "Snapdragon 7s Gen 3",
+      "camera": "50MP + 50MP + 8MP",
+      "cost": "₹31999",
+      "is_available": true,
+      "rating": 4.5,
+      "image": "http://localhost:4200/assets/images/Nothing/Phone_3A_Pro.jpg"
+    },
+    {
+      "id": "21",
+      "catid": 6,
+      "vendor": "Nothing",
+      "Model": "Phone 3a",
+      "Processor": "Snapdragon 7s Gen 3",
+      "camera": "50MP + 50MP + 8MP",
+      "cost": "₹24999",
+      "is_available": true,
+      "rating": 4.5,
+      "image": "http://localhost:4200/assets/images/Nothing/Phone_3A.jpg"
+    },
+    {
+      "id": "22",
+      "catid": 7,
+      "vendor": "Oneplus",
+      "Model": "13",
+      "Processor": "Snapdragon 8 Elite",
+      "camera": "50MP + 50MP + 50MP",
+      "cost": "₹69997",
+      "is_available": true,
+      "rating": 4.5,
+      "image": "http://localhost:4200/assets/images/Oneplus/13.jpg"
+    },
+    {
+      "id": "23",
+      "catid": 7,
+      "vendor": "Oneplus",
+      "Model": "13R",
+      "Processor": "Snapdragon 8 Gen 3",
+      "camera": "50MP + 50MP + 8MP",
+      "cost": "₹42997",
+      "is_available": true,
+      "rating": 4.3,
+      "image": "http://localhost:4200/assets/images/Oneplus/13R.jpg"
+    },
+    {
+      "id": "24",
+      "catid": 7,
+      "vendor": "Oneplus",
+      "Model": "Nord 4",
+      "Processor": "Snapdragon 7+ Gen 3",
+      "camera": "50MP + 8MP",
+      "cost": "₹29999",
+      "is_available": true,
+      "rating": 4.3,
+      "image": "http://localhost:4200/assets/images/Oneplus/Nord_4.jpg"
+    },
+    {
+      "id": "25",
+      "catid": 7,
+      "vendor": "Oneplus",
+      "Model": "Nord 5",
+      "Processor": "Snapdragon 8s Gen 3",
+      "camera": "50MP + 8MP",
+      "cost": "₹31999",
+      "is_available": true,
+      "rating": 4.5,
+      "image": "http://localhost:4200/assets/images/Oneplus/Nord_5.jpg"
+    },
+    {
+      "id": "26",
+      "catid": 7,
+      "vendor": "Oneplus",
+      "Model": "Nord CE 5",
+      "Processor": "Mediatek Dimensity 8350",
+      "camera": "50MP + 8MP",
+      "cost": "₹24998",
+      "is_available": true,
+      "rating": 4.2,
+      "image": "http://localhost:4200/assets/images/Oneplus/Nord_CE_5.jpg"
+    },
+    {
+      "id": "27",
+      "catid": 8,
+      "vendor": "Oppo",
+      "Model": "F29 Pro",
+      "Processor": "Mediatek Dimensity 7300",
+      "camera": "50MP + 2MP",
+      "cost": "₹27999",
+      "is_available": true,
+      "rating": 4.1,
+      "image": "http://localhost:4200/assets/images/Oppo/F29_Pro.jpg"
+    },
+    {
+      "id": "28",
+      "catid": 8,
+      "vendor": "Oppo",
+      "Model": "F29",
+      "Processor": "Snapdragon 6 Gen 1",
+      "camera": "50MP + 2MP",
+      "cost": "₹25998",
+      "is_available": true,
+      "rating": 4,
+      "image": "http://localhost:4200/assets/images/Oppo/F29.jpg"
+    },
+    {
+      "id": "29",
+      "catid": 8,
+      "vendor": "Oppo",
+      "Model": "Find X8",
+      "Processor": "Mediatek Dimensity 9400",
+      "camera": "50MP + 50MP + 50MP",
+      "cost": "₹69999",
+      "is_available": true,
+      "rating": 4.7,
+      "image": "http://localhost:4200/assets/images/Oppo/Find_X8.jpg"
+    },
+    {
+      "id": "30",
+      "catid": 8,
+      "vendor": "Oppo",
+      "Model": "K13",
+      "Processor": "Snapdragon 6 Gen 4",
+      "camera": "50MP + 2MP",
+      "cost": "₹19999",
+      "is_available": true,
+      "rating": 4.5,
+      "image": "http://localhost:4200/assets/images/Oppo/K13.jpg"
+    },
+    {
+      "id": "31",
+      "catid": 8,
+      "vendor": "Oppo",
+      "Model": "K13x",
+      "Processor": "Mediatek Dimensity 6300",
+      "camera": "50MP + 2MP",
+      "cost": "₹11999",
+      "is_available": true,
+      "rating": 4.5,
+      "image": "http://localhost:4200/assets/images/Oppo/K13x.png"
+    },
+    {
+      "id": "32",
+      "catid": 8,
+      "vendor": "Oppo",
+      "Model": "Reno 14 Pro",
+      "Processor": "Mediatek Dimensity 8450",
+      "camera": "50MP + 50MP + 50MP",
+      "cost": "₹49999",
+      "is_available": true,
+      "rating": 4.5,
+      "image": "http://localhost:4200/assets/images/Oppo/Reno_14_Pro.jpg"
+    },
+    {
+      "id": "33",
+      "catid": 8,
+      "vendor": "Oppo",
+      "Model": "Reno 14",
+      "Processor": "Mediatek Dimensity 8350",
+      "camera": "50MP + 8MP + 50MP",
+      "cost": "₹37999",
+      "is_available": true,
+      "rating": 4.4,
+      "image": "http://localhost:4200/assets/images/Oppo/Reno_14.jpg"
+    },
+    {
+      "id": "34",
+      "catid": 9,
+      "vendor": "Poco",
+      "Model": "M7 Pro",
+      "Processor": "Mediatek Dimensity 7025 Ultra",
+      "camera": "50MP + 2MP",
+      "cost": "₹12999",
+      "is_available": true,
+      "rating": 4.3,
+      "image": "http://localhost:4200/assets/images/Poco/M7_Pro.jpg"
+    },
+    {
+      "id": "35",
+      "catid": 9,
+      "vendor": "Poco",
+      "Model": "M7",
+      "Processor": "Snapdragon 4 Gen 2",
+      "camera": "50MP",
+      "cost": "₹9299",
+      "is_available": true,
+      "rating": 4.1,
+      "image": "http://localhost:4200/assets/images/Poco/M7.jpg"
+    },
+    {
+      "id": "36",
+      "catid": 9,
+      "vendor": "Poco",
+      "Model": "X7 Pro",
+      "Processor": "Mediatek Dimensity 8400 Ultra",
+      "camera": "50MP + 8MP",
+      "cost": "₹22999",
+      "is_available": true,
+      "rating": 4.3,
+      "image": "http://localhost:4200/assets/images/Poco/X7_Pro.jpg"
+    },
+    {
+      "id": "37",
+      "catid": 9,
+      "vendor": "Poco",
+      "Model": "X7",
+      "Processor": "Mediatek Dimensity 7300 Ultra",
+      "camera": "50MP + 8MP + 2MP",
+      "cost": "₹15999",
+      "is_available": true,
+      "rating": 4.3,
+      "image": "http://localhost:4200/assets/images/Poco/X7.jpg"
+    },
+    {
+      "id": "38",
+      "catid": 10,
+      "vendor": "Realme",
+      "Model": "15 Pro",
+      "Processor": "Snapdragon 7 Gen 4",
+      "camera": "50MP + 50MP",
+      "cost": "₹31999",
+      "is_available": true,
+      "rating": 4.4,
+      "image": "http://localhost:4200/assets/images/Realme/15_Pro.jpg"
+    },
+    {
+      "id": "39",
+      "catid": 10,
+      "vendor": "Realme",
+      "Model": "15",
+      "Processor": "Mediatek Dimensity 7300+",
+      "camera": "50MP + 8MP",
+      "cost": "₹25999",
+      "is_available": true,
+      "rating": 4.4,
+      "image": "http://localhost:4200/assets/images/Realme/15.jpg"
+    },
+    {
+      "id": "40",
+      "catid": 10,
+      "vendor": "Realme",
+      "Model": "GT 7 Pro",
+      "Processor": "Snapdragon 8 Elite",
+      "camera": "50MP + 8MP + 50MP",
+      "cost": "₹49999",
+      "is_available": true,
+      "rating": 4.3,
+      "image": "http://localhost:4200/assets/images/Realme/GT_7_Pro.jpg"
+    },
+    {
+      "id": "41",
+      "catid": 10,
+      "vendor": "Realme",
+      "Model": "GT 7",
+      "Processor": "Mediatek Dimensity 9400e",
+      "camera": "50MP + 8MP + 50MP",
+      "cost": "₹39998",
+      "is_available": true,
+      "rating": 4.6,
+      "image": "http://localhost:4200/assets/images/Realme/GT_7.jpg"
+    },
+    {
+      "id": "42",
+      "catid": 11,
+      "vendor": "Redmi",
+      "Model": "K50i",
+      "Processor": "Mediatek Dimensity 8100",
+      "camera": "64MP + 8MP + 2MP",
+      "cost": "₹24999",
+      "is_available": true,
+      "rating": 4,
+      "image": "http://localhost:4200/assets/images/Redmi/K50i.jpg"
+    },
+    {
+      "id": "43",
+      "catid": 11,
+      "vendor": "Redmi",
+      "Model": "Note 14 Pro",
+      "Processor": "Mediatek Dimensity 7300 Ultra",
+      "camera": "50MP + 8MP + 2MP",
+      "cost": "₹24999",
+      "is_available": true,
+      "rating": 4,
+      "image": "http://localhost:4200/assets/images/Redmi/Note_14_Pro.jpg"
+    },
+    {
+      "id": "44",
+      "catid": 11,
+      "vendor": "Redmi",
+      "Model": "Note 14 Pro+",
+      "Processor": "Snapdragon 7s Gen 3",
+      "camera": "50MP + 50MP + 8MP",
+      "cost": "₹29999",
+      "is_available": true,
+      "rating": 4.1,
+      "image": "http://localhost:4200/assets/images/Redmi/Note_14_Pro+.jpg"
+    },
+    {
+      "id": "45",
+      "catid": 11,
+      "vendor": "Redmi",
+      "Model": "Note 14",
+      "Processor": "Mediatek Dimensity 7025 Ultra",
+      "camera": "50MP + 8MP + 2MP",
+      "cost": "₹16999",
+      "is_available": true,
+      "rating": 4.1,
+      "image": "http://localhost:4200/assets/images/Redmi/Note_14.jpg"
+    },
+    {
+      "image": "http://localhost:4200/assets/images/Samsung/S25_ultra.jpg",
+      "vendor": "Samsung",
+      "Model": "S25 Ultra",
+      "Processor": "Snapdragon 8 Elite",
+      "camera": "200MP + 50MP + 50MP + 10MP",
+      "cost": "₹165999",
+      "rating": 4.7,
+      "catid":12,
+      "id": "46"
+    },
+    {
+      "id": "47",
+      "catid": 12,
+      "vendor": "Samsung",
+      "Model": "S25",
+      "Processor": "Snapdragon 8 Elite",
+      "camera": "50MP + 10MP + 12MP",
+      "cost": "₹80999",
+      "is_available": true,
+      "rating": 4.6,
+      "image": "http://localhost:4200/assets/images/Samsung/S25.jpg"
+    },
+    {
+      "id": "48",
+      "catid": 12,
+      "vendor": "Samsung",
+      "Model": "S25 Plus",
+      "Processor": "Snapdragon 8 Elite",
+      "camera": "50MP + 10MP + 12MP",
+      "cost": "₹99999",
+      "is_available": true,
+      "rating": 4.8,
+      "image": "http://localhost:4200/assets/images/Samsung/S25+.jpg"
+    },
+    {
+      "id": "49",
+      "catid": 12,
+      "vendor": "Samsung",
+      "Model": "Z Flip 7",
+      "Processor": "Exynos 2500",
+      "camera": "50MP + 12MP",
+      "cost": "₹109999",
+      "is_available": true,
+      "rating": 4.7,
+      "image": "http://localhost:4200/assets/images/Samsung/Z_Flip_7.png"
+    },
+    {
+      "id": "50",
+      "catid": 12,
+      "vendor": "Samsung",
+      "Model": "Z Fold 7",
+      "Processor": "Snapdragon 8 Elite",
+      "camera": "200MP + 12MP + 10MP",
+      "cost": "₹174999",
+      "is_available": true,
+      "rating": 4.6,
+      "image": "http://localhost:4200/assets/images/Samsung/Z_Fold_7.png"
+    },
+    {
+      "id": "51",
+      "catid": 13,
+      "vendor": "Vivo",
+      "Processor": "Mediatek Dimensity 6300",
+      "camera": "50MP + 2MP",
+      "cost": "₹12999",
+      "is_available": true,
+      "rating": 4.3,
+      "image": "http://localhost:4200/assets/images/Vivo/T4_Lite.jpg"
+    },
+    {
+      "id": "52",
+      "catid": 13,
+      "vendor": "Vivo",
+      "Processor": "Mediatek Dimensity 9300+",
+      "camera": "50MP + 8MP + 50MP",
+      "cost": "₹39999",
+      "is_available": true,
+      "rating": 4.5,
+      "image": "http://localhost:4200/assets/images/Vivo/T4_Ultra.jpg"
+    },
+    {
+      "id": "53",
+      "catid": 13,
+      "vendor": "Vivo",
+      "Processor": "Snapdragon 7s Gen 3",
+      "camera": "50MP + 2MP",
+      "cost": "₹22999",
+      "is_available": true,
+      "rating": 4.5,
+      "image": "http://localhost:4200/assets/images/Vivo/T4.jpg"
+    },
+    {
+      "id": "54",
+      "catid": 13,
+      "vendor": "Vivo",
+      "Processor": "Mediatek Dimensity 7300",
+      "camera": "50MP + 2MP",
+      "cost": "₹16499",
+      "is_available": true,
+      "rating": 4.4,
+      "image": "http://localhost:4200/assets/images/Vivo/T4x.jpg"
+    },
+    {
+      "id": "55",
+      "catid": 13,
+      "vendor": "Vivo",
+      "Processor": "Snapdragon 7s Gen 3",
+      "camera": "50MP + 50MP",
+      "cost": "₹44800",
+      "is_available": true,
+      "rating": 4.5,
+      "image": "http://localhost:4200/assets/images/Vivo/V50.jpg"
+    },
+    {
+      "id": "56",
+      "catid": 13,
+      "vendor": "Vivo",
+      "Processor": "Mediatek Dimensity 7300",
+      "camera": "50MP + 8MP",
+      "cost": "₹24598",
+      "is_available": true,
+      "rating": 4.4,
+      "image": "http://localhost:4200/assets/images/Vivo/V50e.jpg"
+    },
+    {
+      "id": "57",
+      "catid": 13,
+      "vendor": "Vivo",
+      "Processor": "Snapdragon 8 Gen 3",
+      "camera": "50MP + 50MP + 50MP",
+      "cost": "₹149999",
+      "is_available": true,
+      "rating": 4.6,
+      "image": "http://localhost:4200/assets/images/Vivo/X_Fold_5.png"
+    },
+    {
+      "id": "58",
+      "catid": 13,
+      "vendor": "Vivo",
+      "Processor": "Mediatek Dimensity 9300+",
+      "camera": "50MP + 8MP + 50MP",
+      "cost": "₹59999",
+      "is_available": true,
+      "rating": 4.6,
+      "image": "http://localhost:4200/assets/images/Vivo/X200_FE.jpg"
+    },
+    {
+      "id": "59",
+      "catid": 13,
+      "vendor": "Vivo",
+      "Processor": "Snapdragon 4 Gen 2",
+      "camera": "50MP + 2MP",
+      "cost": "₹21999",
+      "is_available": true,
+      "rating": 4.4,
+      "image": "http://localhost:4200/assets/images/Vivo/Y300.jpg"
+    },
+    {
+      "id": "60",
+      "catid": 13,
+      "vendor": "Vivo",
+      "Processor": "Mediatek Dimensity 7300",
+      "camera": "50MP + 2MP",
+      "cost": "₹26999",
+      "is_available": true,
+      "rating": 4.4,
+      "image": "http://localhost:4200/assets/images/Vivo/Y400_Pro.jpg"
+    }
+  ]
+}
