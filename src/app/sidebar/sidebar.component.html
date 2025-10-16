@@ -1,6 +1,6 @@
 <div class="list-group">
-    <a [routerLink]="['/real','all']" class="list-group-item">All</a>
+    <a [routerLink]="['/real']" class="list-group-item" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">All</a>
 </div>
 <div *ngFor="let cat of listOfCategories" class="list-group">
-    <a [routerLink]="['/real','category', cat.id]" class="list-group-item">{{cat.name}}</a>
+    <a [routerLink]="['/real','category', cat.id]" class="list-group-item" routerLinkActive="active">{{cat.name}}</a>
 </div>

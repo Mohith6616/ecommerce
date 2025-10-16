@@ -8,6 +8,7 @@ import { AuthGuard } from './services/auth.guard';
 import { ViewAllProductsComponent } from './products/viewallproducts.component';
 import { EmptyComponent } from './shared/empty.component';
 import { ViewProductComponent } from './products/viewproduct.component';
+import { CompareProductsComponent } from './compare-products/compare-products.component';
 
 const routes: Routes = [
   {path:'',component:HomeComponent},
@@ -16,9 +17,10 @@ const routes: Routes = [
   {path:'products/viewallproducts', component: ViewAllProductsComponent},
   {path:'products/viewallbycategory/:catid', component: ViewAllProductsComponent},
   {path:'products/viewproduct/:id', component: ViewProductComponent},
+  { path: 'real/compare', component: CompareProductsComponent },
   {path:'real', component: RealComponent, canActivate: [AuthGuard], children: [
-    { path: '', component: EmptyComponent },
-    { path: 'all', component: ViewAllProductsComponent },
+    { path: '', component: ViewAllProductsComponent },
+    { path: 'all', redirectTo: '', pathMatch: 'full' },
     { path: 'category/:catid', component: ViewAllProductsComponent },
     { path: 'viewproduct/:id', component: ViewProductComponent }
   ]}

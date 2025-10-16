@@ -12,8 +12,10 @@ import { Productsrvc } from '../productsrvc.service';
 })
 export class ViewProductComponent implements OnInit {
   product: any = null;
+  slides: string[] = [];
   loading = false;
   error = '';
+  currentIndex = 0;
 
   constructor(private route: ActivatedRoute, private srvc: Productsrvc) {}
 
@@ -29,13 +31,24 @@ export class ViewProductComponent implements OnInit {
     this.srvc.getProduct(id).subscribe({
       next: (data: any) => {
         this.product = data;
+        const img = data?.image ? String(data.image) : '';
+        this.slides = img ? [img, img] : [];
         this.loading = false;
       },
-      error: (err: any) => {
-        console.error('Failed to load product', err);
+      error: () => {
         this.error = 'Failed to load product.';
         this.loading = false;
       }
     });
+  }
+
+  prevSlide() {
+    if (!this.slides.length) return;
+    this.currentIndex = (this.currentIndex - 1 + this.slides.length) % this.slides.length;
+  }
+
+  nextSlide() {
+    if (!this.slides.length) return;
+    this.currentIndex = (this.currentIndex + 1) % this.slides.length;
   }
 }

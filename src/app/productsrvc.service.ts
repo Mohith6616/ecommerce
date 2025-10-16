@@ -10,12 +10,11 @@ export class Productsrvc {
     return this.httpsrvc.get(`${this.baseUrl}/categories.json`);
   }
   getAllProducts(){
-    const url="http://localhost:3000/products";
-    return this.httpsrvc.get(url);
+    return this.httpsrvc.get(`${this.baseUrl}/products.json`);
   }
   getProduct(id:any){
-    const url="http://localhost:3000/products/"+id;
-    return this.httpsrvc.get(url);
+    const pid=id-1;
+    return this.httpsrvc.get(`${this.baseUrl}/products/${pid}.json`);
   }
   getAllProductsByCategory(catid:any){
     const url="http://localhost:3000/products/?catid="+catid;

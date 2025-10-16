@@ -1,21 +1,24 @@
-<div class="container" *ngIf="!loading">
-  <div *ngIf="error" class="alert alert-danger">{{ error }}</div>
-  <div *ngIf="product" class="card" style="max-width:800px; margin:auto;">
-    <div class="row g-0">
-      <div class="col-md-4">
-        <img [src]="product.image" class="img-fluid rounded-start" alt="{{product.Model}}">
-      </div>
-      <div class="col-md-8">
-        <div class="card-body">
-          <h5 class="card-title">{{ product.vendor }} - {{ product.Model }}</h5>
-          <p class="card-text"><strong>Processor:</strong> {{ product.Processor }}</p>
-          <p class="card-text"><strong>Camera:</strong> {{ product.camera }}</p>
-          <p class="card-text"><strong>Cost:</strong> {{ product.cost }}</p>
-          <p class="card-text"><strong>Rating:</strong> {{ product.rating }}</p>
-          <a [routerLink]="['/real','all']" class="btn btn-secondary">Back</a>
+<div class="product-card" *ngIf="product">
+  <div class="product-carousel">
+    <div class="carousel-window">
+      <div class="carousel-track" [style.transform]="'translateX(-' + (currentIndex * 100) + '%)'">
+        <div class="carousel-slide" *ngFor="let s of slides; let i = index">
+          <img [src]="s" alt="{{product.Model}} slide {{i+1}}">
         </div>
       </div>
+      <button class="nav prev" (click)="prevSlide()">&#8592;</button>
+      <button class="nav next" (click)="nextSlide()">&#8594;</button>
     </div>
   </div>
+
+  <div class="product-info">
+    <h3>{{ product.vendor }} {{ product.Model }}</h3>
+    <p><strong>Processor:</strong> {{ product.Processor }}</p>
+    <p><strong>Camera:</strong> {{ product.camera }}</p>
+    <p><strong>Cost:</strong> {{ product.cost }}</p>
+    <p><strong>Rating:</strong> {{ product.rating }}</p>
+  </div>
+  <div class="button">
+    <a [routerLink]="['/real','all']" class="btn btn-secondary">Back</a>
+  </div>
 </div>
-<div *ngIf="loading" class="text-center">Loading...</div>

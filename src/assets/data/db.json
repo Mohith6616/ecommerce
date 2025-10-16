@@ -745,23 +745,37 @@
       "id": "59",
       "catid": 13,
       "vendor": "Vivo",
-      "Processor": "Snapdragon 4 Gen 2",
-      "camera": "50MP + 2MP",
-      "cost": "₹21999",
+      "Model": "X200 Pro",
+      "Processor": "Mediatek Dimensity 9400",
+      "camera": "50MP + 50MP + 200MP",
+      "cost": "₹94999",
       "is_available": true,
-      "rating": 4.4,
-      "image": "http://localhost:4200/assets/images/Vivo/Y300.jpg"
+      "rating": 4.7,
+      "image": "https://i.ibb.co/CKhS8mbQ/X200-Pro.png"
     },
     {
       "id": "60",
       "catid": 13,
       "vendor": "Vivo",
+      "Model": "Y300",
+      "Processor": "Snapdragon 4 Gen 2",
+      "camera": "50MP + 2MP",
+      "cost": "₹21999",
+      "is_available": true,
+      "rating": 4.4,
+      "image": "https://i.ibb.co/1ffjt7RD/Y300.png"
+    },
+    {
+      "id": "61",
+      "catid": 13,
+      "vendor": "Vivo",
+      "Model": "Y400 Pro",
       "Processor": "Mediatek Dimensity 7300",
       "camera": "50MP + 2MP",
       "cost": "₹26999",
       "is_available": true,
       "rating": 4.4,
-      "image": "http://localhost:4200/assets/images/Vivo/Y400_Pro.jpg"
+      "image": "https://i.ibb.co/8Lp3G3PX/Y400-Pro.jpg"
     }
   ]
 }

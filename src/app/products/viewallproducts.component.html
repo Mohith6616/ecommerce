@@ -1,20 +1,51 @@
 <div class="container">
   <div class="d-flex justify-content-between align-items-center mb-3">
     <h2>Products</h2>
+    <div>
+      <button class="btn btn-warning me-2" [disabled]="selectedProducts.length < 2" (click)="goToComparePage()">
+        Compare ({{ selectedProducts.length }})
+      </button>
+      <label for="sortPrice" class="me-2">Sort by price:</label>
+      <select #sortSel id="sortPrice" (change)="onSortChange(sortSel.value)" class="form-select d-inline-block me-2" style="width: 180px;">
+        <option value="none">None</option>
+        <option value="low-high">Low - High</option>
+        <option value="high-low">High - Low</option>
+      </select>
+      <label for="sortRating" class="me-2">Sort by rating:</label>
+      <select #ratingSel id="sortRating" (change)="onRatingSortChange(ratingSel.value)" class="form-select d-inline-block" style="width: 180px;">
+        <option value="none">None</option>
+        <option value="low-high">Low - High</option>
+        <option value="high-low">High - Low</option>
+      </select>
+      <label for="priceRange" class="me-2 ms-2">Filter by price:</label>
+      <select
+        id="priceRange"
+        (change)="onPriceRangeChange($any($event.target).value)"
+        class="form-select d-inline-block"
+        style="width: 200px;"
+      >
+        <option value="none">None (All)</option>
+        <option *ngFor="let range of priceRanges" [value]="range.value">
+          {{ range.label }}
+        </option>
+      </select>
+    </div>
   </div>
 
   <div *ngIf="errorMessage" class="alert alert-danger">{{ errorMessage }}</div>
 
-  <table class="table table-bordered table-striped" *ngIf="listofproducts?.length; else noProducts">
+  <div class="card bg-white p-3">
+    <table class="table table-bordered table-striped text-center" *ngIf="listofproducts?.length; else noProducts">
     <tr>
-      <th>Company Name</th>
+      <th>Brand</th>
       <th>Model</th>
       <th>Processor</th>
       <th>Camera</th>
-      <th>Cost</th>
+      <th>Price</th>
       <th>Rating</th>
       <th>Image</th>
       <th>Actions</th>
+      <th>Compare</th>
     </tr>
     <tr *ngFor="let product of listofproducts">
       <td>{{product.vendor}}</td>
@@ -25,8 +56,13 @@
       <td>{{product.rating}}</td>
       <td><img [src]="product.image" alt="Mobile Image" style="max-width:100px;"/></td>
       <td><a [routerLink]="['/real','viewproduct', product.id]" class="btn btn-success">view</a></td>
+      <td><input type="checkbox" #chk
+  [checked]="selectedProducts.includes(product)"
+  [disabled]="!selectedProducts.includes(product) && selectedProducts.length >= 3"
+  (change)="toggleSelection(product, chk.checked)"></td>
     </tr>
-  </table>
+    </table>
+  </div>
 
   <ng-template #noProducts>
     <div class="alert alert-info">No products available.</div>

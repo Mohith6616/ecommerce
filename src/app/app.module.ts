@@ -13,6 +13,7 @@ import { RealComponent } from './real/real.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { ViewAllProductsComponent } from './products/viewallproducts.component';
 import { HttpClientModule } from '@angular/common/http';
+import { CompareProductsComponent } from './compare-products/compare-products.component';
 
 
 const firebaseConfig = {
@@ -32,6 +33,7 @@ const firebaseConfig = {
     SignupComponent,
     HomeComponent,
     RealComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -39,6 +41,7 @@ const firebaseConfig = {
     FormsModule,
     HttpClientModule,
     ViewAllProductsComponent,
+    CompareProductsComponent,
     SidebarComponent
   ],
   providers: [

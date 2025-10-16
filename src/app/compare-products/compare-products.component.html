@@ -1,0 +1,47 @@
+<div id="bgimg">
+  <a routerLink="/real/all" class="btn btn-secondary">Back</a>
+  <div class="container mt-4" *ngIf="products.length">
+    
+
+    <!-- <div class="comparison-wrapper d-flex gap-4 overflow-auto">
+      <div class="product-card border p-3 text-center" *ngFor="let p of products">
+        <img [src]="p.image" alt="{{ p.Model }}" class="img-fluid mb-3" style="max-height:200px;" />
+        <h5>{{ p.vendor }} {{ p.Model }}</h5>
+        <p><strong>Processor:</strong> {{ p.Processor }}</p>
+        <p><strong>Camera:</strong> {{ p.camera }}</p>
+        <p><strong>Cost:</strong> {{ p.cost }}</p>
+        <p><strong>Rating:</strong> {{ p.rating }}</p>
+      </div>
+    </div> -->
+
+    <div class="bg-white">
+      <table class="table table-bordered table-striped text-center">
+        <h3>Compare Products</h3>
+        <tr>
+          <th></th>
+          <td *ngFor="let p of products"><img [src]="p.image" alt="{{p.Model}}" class="img"></td>
+        </tr>
+        <tr>
+          <th>Mobile Name</th>
+          <td *ngFor="let p of products">{{ p.vendor }} {{ p.Model }}</td>
+        </tr>
+        <tr>
+          <th>Processor</th>
+          <td *ngFor="let p of products">{{ p.Processor }}</td>
+        </tr>
+        <tr>
+          <th>Camera</th>
+          <td *ngFor="let p of products">{{ p.camera }}</td>
+        </tr>
+        <tr>
+          <th>Cost</th>
+          <td *ngFor="let p of products">{{ p.cost }}</td>
+        </tr>
+        <tr>
+          <th>Rating</th>
+          <td *ngFor="let p of products">{{ p.rating }}</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>
