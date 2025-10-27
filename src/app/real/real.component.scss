@@ -1,49 +1,133 @@
-
-#color{
-    color: rgb(255, 136, 0);
-}
-.container1{
-    display:flex;
-    justify-content: space-between;
-    background-color: rgb(220, 219, 219);
-    width:100%;
-    align-items: center;
-}
-.flex{
-    display: flex;
-}
-img{
-    width: 20%;
-    height: 20%;
-}
-.bgimg{
-    /* let the background cover at least the viewport and grow as content grows */
-    min-height: 100vh;
-    width: 100%;
-    background-image: url("https://www.visiondesign.com/wp-content/uploads/hero-background-ecommerce-1.jpg");
-    background-position: right bottom;
-    background-repeat: no-repeat;
-    background-size: cover;
+/* === GLOBAL & BACKGROUND === */
+:host {
+  display: block;
 }
 
-/* Make the sidebar sticky so it stays visible while scrolling the right-hand content */
-.bgimg .row {
-    align-items: flex-start; /* ensure columns align at top */
+.bgimg {
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  width: 100%;
+  background-image: url("https://www.visiondesign.com/wp-content/uploads/hero-background-ecommerce-1.jpg");
+  background-position: right bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
-.bgimg .col-md-2 {
-    /* allow the sidebar column to size to its content and enable sticky
-         positioning on the child component */
-    display: block;
+
+/* === NAVBAR === */
+.fixed-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1030;
+  background-color: rgb(220, 219, 219);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  flex-wrap: wrap;
+}
+
+.fixed-navbar img {
+  height: 50px;
+  width: auto;
+}
+
+.username-text {
+  margin: 0;
+  font-size: 1.2rem;
+  font-family: cursive;
+  color: #000;
+}
+
+.flex {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+.main-content {
+  margin-top: 120px;
+  width: 100%;
+}
+.sidebar-col {
 }
 .bgimg app-sidebar {
-    display: block; /* ensure element behaves like a block */
-    position:fixed;
-    top: 85px; /* offset so it sits below the top header */
-    z-index: 1;
+  display: block;
+  position: fixed;
+  top: 75px;
+  z-index: 1;
 }
-// .bgimg app-sidebar {
-//     // display: block; /* ensure element behaves like a block */
-//     position:fixed;
-//     z-index: 10;
+@media (max-width: 992px) {
+  .fixed-navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: center;
+  }
 
-// }
+  .fixed-navbar img {
+    height: 40px;
+  }
+
+  .username-text {
+    margin-top: 5px;
+    margin-left: 0;
+    font-size: 1rem;
+  }
+
+  .flex {
+    justify-content: center;
+    width: 100%;
+    margin-top: 5px;
+  }
+
+  .main-content {
+    margin-top: 160px;
+  }
+
+  .sidebar-col {
+    order: 2;
+  }
+
+  .content-col {
+    order: 1;
+  }
+}
+@media (max-width: 768px) {
+  .fixed-navbar {
+    padding: 8px 12px;
+  }
+
+  .fixed-navbar img {
+    height: 35px;
+  }
+
+  .username-text {
+    font-size: 1rem;
+    margin-left: 0;
+  }
+
+  .flex {
+    justify-content: center;
+  }
+  .sidebar-col app-sidebar .categories-container {
+    flex-direction: row;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  .sidebar-col {
+    margin-bottom: 1rem;
+  }
+
+  .main-content .row {
+    flex-direction: column;
+  }
+}
+html,
+body {
+  overflow-x: hidden;
+  width: 100%;
+}

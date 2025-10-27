@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import { Productsrvc } from '../productsrvc.service';
 import { CommonModule } from '@angular/common';
-import { RouterModule } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
+
 
 @Component({
   selector: 'app-sidebar',
@@ -12,18 +13,22 @@ import { RouterModule } from '@angular/router';
 })
 export class SidebarComponent implements OnInit {
   listOfCategories: any[] = [];
-  constructor(public srvc: Productsrvc) {}
+  isCollapsed = true;
+  window = window;
+
+  constructor(public srvc: Productsrvc,private router:Router) {}
 
   ngOnInit() {
     this.srvc.getAllCategories().subscribe(
-      (data: any) => {
-        this.listOfCategories = data || [];
-      },
+      (data: any) => this.listOfCategories = data || [],
       (err: any) => {
         console.error('Failed to load categories', err);
         this.listOfCategories = [];
       }
     );
   }
-}
 
+  toggleSidebar() {
+    this.isCollapsed = !this.isCollapsed;
+  }
+}

@@ -56,19 +56,9 @@ export class AuthService {
       throw new Error(this.getFirebaseErrorMessage(e.code));
     }
   }
-
-  /**
-   * 🔹 LOGOUT:
-   * Ends the user's Firebase session.
-   */
   logout() {
     return signOut(this.auth);
   }
-
-  /**
-   * 🔹 FIND USER BY EMAIL:
-   * Checks Firestore to see if a user exists with the given email.
-   */
   async findUserByEmail(email: string): Promise<any | null> {
     try {
       return await runInInjectionContext(this.injector, async () => {
@@ -82,11 +72,6 @@ export class AuthService {
       return null;
     }
   }
-
-  /**
-   * 🔹 ERROR HANDLER:
-   * Converts Firebase error codes to user-friendly messages.
-   */
   private getFirebaseErrorMessage(code: string): string {
     switch (code) {
       case 'auth/email-already-in-use':

@@ -1,66 +1,120 @@
-<div class="container">
-  <div class="d-flex justify-content-between align-items-center mb-3">
-    <h2>Products</h2>
-    <div>
-      <button class="btn btn-warning me-2" [disabled]="selectedProducts.length < 2" (click)="goToComparePage()">
+<div class="container product-container">
+  <div class="products-toolbar mb-3 fixed-toolbar">
+    <div class="d-flex flex-wrap justify-content-between align-items-center">
+      <h2 class="mb-2 me-3">Products</h2>
+      <button class="btn btn-secondary d-md-none mb-2" (click)="toggleToolbar()">
+        ☰ Filters
+      </button>
+    </div>
+    <div class="toolbar-controls" [class.open]="!isToolbarCollapsed">
+      <button
+        class="btn btn-warning mb-2 me-2"
+        [disabled]="selectedProducts.length < 2"
+        (click)="goToComparePage()"
+      >
         Compare ({{ selectedProducts.length }})
       </button>
-      <label for="sortPrice" class="me-2">Sort by price:</label>
-      <select #sortSel id="sortPrice" (change)="onSortChange(sortSel.value)" class="form-select d-inline-block me-2" style="width: 180px;">
-        <option value="none">None</option>
-        <option value="low-high">Low - High</option>
-        <option value="high-low">High - Low</option>
-      </select>
-      <label for="sortRating" class="me-2">Sort by rating:</label>
-      <select #ratingSel id="sortRating" (change)="onRatingSortChange(ratingSel.value)" class="form-select d-inline-block" style="width: 180px;">
-        <option value="none">None</option>
-        <option value="low-high">Low - High</option>
-        <option value="high-low">High - Low</option>
-      </select>
-      <label for="priceRange" class="me-2 ms-2">Filter by price:</label>
-      <select
-        id="priceRange"
-        (change)="onPriceRangeChange($any($event.target).value)"
-        class="form-select d-inline-block"
-        style="width: 200px;"
-      >
-        <option value="none">None (All)</option>
-        <option *ngFor="let range of priceRanges" [value]="range.value">
-          {{ range.label }}
-        </option>
-      </select>
+
+      <div class="filter-group mb-2">
+        <label for="sortPrice" class="me-2">Sort by price:</label>
+        <select
+          #sortSel
+          id="sortPrice" [(ngModel)]="sortOrder"
+          (change)="onSortChange(sortSel.value)"
+          class="form-select me-2"
+        >
+          <option value="none">None</option>
+          <option value="low-high">Low - High</option>
+          <option value="high-low">High - Low</option>
+        </select>
+      </div>
+
+      <div class="filter-group mb-2">
+        <label for="sortRating" class="me-2">Sort by rating:</label>
+        <select
+          #ratingSel
+          id="sortRating" [(ngModel)]="ratingSortOrder"
+          (change)="onRatingSortChange(ratingSel.value)"
+          class="form-select me-2"
+        >
+          <option value="none">None</option>
+          <option value="low-high">Low - High</option>
+          <option value="high-low">High - Low</option>
+        </select>
+      </div>
+
+      <div class="filter-group mb-2">
+        <label for="priceRange" class="me-2">Filter by price:</label>
+        <select
+          id="priceRange" [(ngModel)]="priceRange"
+          (change)="onPriceRangeChange($any($event.target).value)"
+          class="form-select"
+        >
+          <option value="none">None (All)</option>
+          <option *ngFor="let range of priceRanges" [value]="range.value">
+            {{ range.label }}
+          </option>
+        </select>
+      </div>
+
+      <!-- Brand Filter: visible only on mobile view -->
+      <div class="filter-group mb-2 d-md-none">
+        <label for="brandFilter" class="me-2">Filter by brand:</label>
+        <select
+          id="brandFilter"
+          (change)="onBrandChange($any($event.target).value)"
+          class="form-select"
+        >
+          <option value="none">All Brands</option>
+          <option *ngFor="let brand of brandList" [value]="brand">{{ brand }}</option>
+        </select>
+      </div>
     </div>
   </div>
-
   <div *ngIf="errorMessage" class="alert alert-danger">{{ errorMessage }}</div>
-
-  <div class="card bg-white p-3">
-    <table class="table table-bordered table-striped text-center" *ngIf="listofproducts?.length; else noProducts">
-    <tr>
-      <th>Brand</th>
-      <th>Model</th>
-      <th>Processor</th>
-      <th>Camera</th>
-      <th>Price</th>
-      <th>Rating</th>
-      <th>Image</th>
-      <th>Actions</th>
-      <th>Compare</th>
-    </tr>
-    <tr *ngFor="let product of listofproducts">
-      <td>{{product.vendor}}</td>
-      <td>{{product.Model}}</td>
-      <td>{{product.Processor}}</td>
-      <td>{{product.camera}}</td>
-      <td>{{product.cost}}</td>
-      <td>{{product.rating}}</td>
-      <td><img [src]="product.image" alt="Mobile Image" style="max-width:100px;"/></td>
-      <td><a [routerLink]="['/real','viewproduct', product.id]" class="btn btn-success">view</a></td>
-      <td><input type="checkbox" #chk
-  [checked]="selectedProducts.includes(product)"
-  [disabled]="!selectedProducts.includes(product) && selectedProducts.length >= 3"
-  (change)="toggleSelection(product, chk.checked)"></td>
-    </tr>
+  <div class="card bg-white p-3 table-responsive">
+    <table
+      class="table table-bordered table-striped text-center"
+      *ngIf="listofproducts?.length; else noProducts"
+    >
+      <thead class="table-light">
+        <tr>
+          <th>Brand</th>
+          <th>Model</th>
+          <th>Processor</th>
+          <th>Camera</th>
+          <th>Price</th>
+          <th>Rating</th>
+          <th>Image</th>
+          <th>Actions</th>
+          <th>Compare</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let product of listofproducts">
+          <td>{{ product.vendor }}</td>
+          <td>{{ product.Model }}</td>
+          <td>{{ product.Processor }}</td>
+          <td>{{ product.camera }}</td>
+          <td>{{ product.cost }}</td>
+          <td>{{ product.rating }}</td>
+          <td>
+            <img [src]="product.image" alt="Mobile Image" style="max-width:100px;" />
+          </td>
+          <td>
+            <a [routerLink]="['/real','viewproduct', product.id]" class="btn btn-success">View</a>
+          </td>
+          <td>
+            <input
+              type="checkbox"
+              #chk
+              [checked]="selectedProducts.includes(product)"
+              [disabled]="!selectedProducts.includes(product) && selectedProducts.length >= 3"
+              (change)="toggleSelection(product, chk.checked)"
+            />
+          </td>
+        </tr>
+      </tbody>
     </table>
   </div>
 

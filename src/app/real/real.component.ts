@@ -15,7 +15,6 @@ export class RealComponent implements OnInit {
   constructor(private authService: AuthService, private rtr: Router, private auth: Auth) {}
 
   ngOnInit(): void {
-    // Subscribe to auth changes and extract the email prefix (before @)
     onAuthStateChanged(this.auth, (user: User | null) => {
       if (user && user.email) {
         this.username = user.email.split('@')[0];

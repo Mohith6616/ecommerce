@@ -1,8 +1,8 @@
 <div class="bgimg">
-    <div class="container1">
+    <div class="container1 fixed-navbar">
         <div><a><img src="https://pbs.twimg.com/profile_images/1205502063020560384/X7pdXXsq_400x400.jpg" alt="75F APAC" routerLink="/real"></a></div>
         <div>
-            <h4>Hi {{ username }}</h4>
+            <h4 class="space">Hi {{ username }}</h4>
         </div>
         <div>
             <ul class="flex">
@@ -11,14 +11,14 @@
         </div>
     </div>
 
-    <div>
-            <div class="row">
-                <div class="col-md-2">
-                    <app-sidebar></app-sidebar>
-                </div>
-                <div class="col-md-10">
-                    <router-outlet></router-outlet>
-                </div>
+    <div class="main-content">
+        <div class="row">
+            <div class="col-md-2">
+                <app-sidebar></app-sidebar>
             </div>
+            <div class="col-md-10">
+                <router-outlet></router-outlet>
+            </div>
+        </div>
     </div>
 </div>

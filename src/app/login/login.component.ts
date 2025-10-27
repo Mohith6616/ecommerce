@@ -32,12 +32,9 @@ export class LoginComponent {
     this.loading = true;
     try {
       await this.authService.login(this.email, this.password);
-      alert('✅ Login Successful!');
       await this.rtr.navigate(['/real']);
     } catch (error: any) {
       console.error('Login Error:', error);
-
-      // Prefer mapping on error.code (SDK), otherwise fall back to error.message
       const code = error?.code;
       if (code) {
         switch (code) {

@@ -20,16 +20,4 @@ export class Productsrvc {
     const url="http://localhost:3000/products/?catid="+catid;
     return this.httpsrvc.get(url);
   }
-  // addproduct(data:any){
-  //   const url="http://localhost:3000/products";
-  //   return this.httpsrvc.post(url,data);
-  // }
-  // updateProduct(pid:any,pbody:any){
-  //   const url='http://localhost:3000/products/'+pid;
-  //   return this.httpsrvc.put(url,pbody);
-  // }
-  // deleteProduct(id:any){
-  //   const url='http://localhost:3000/products/'+id;
-  //   return this.httpsrvc.delete(url);
-  // }
 }

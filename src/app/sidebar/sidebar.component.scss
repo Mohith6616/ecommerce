@@ -1,28 +1,56 @@
 :host {
-	display: block;
+  display: block;
+  width: 200px;
+  z-index: 20;
+}
+.categories-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
 }
 
-// .list-group {
-// 	margin-bottom: 0.5rem;
-// }
+.list-group {
+  width: 100%;
+  margin: 0;
+}
 
 .list-group-item {
-	background: white;
-	color: #333;
-	border: 1px solid #e6e6e6;
+  background: white;
+  color: #333;
+  border: 1px solid #e6e6e6;
+  display: block;
+  width: 100%;
+  padding: 0.6rem 0.75rem;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 .list-group-item.active {
-	background: rgb(255, 55, 0);
-	color: #fff;
-	border-color: rgb(255, 55, 0);
+  background: rgb(255, 55, 0);
+  color: #fff;
+  border-color: rgb(255, 55, 0);
 }
 
-/* Make links full-width and keep spacing */
-.list-group-item {
-	display: block;
-	width: 200px;
-	padding: 0.6rem 0.75rem;
-	text-decoration: none;
+.list-group-item:hover {
+  background: rgba(255, 55, 0, 0.1);
+  color: rgb(255, 55, 0);
 }
-
+.toggle-btn {
+  display: none;
+  width: 100%;
+  margin-bottom: 0.5rem;
+  z-index: 25;
+}
+.sidebar-menu {
+  display: block;
+  max-height: none;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+@media (max-width: 767px) {
+  .sidebar-menu{
+    display: none;
+  }
+}
